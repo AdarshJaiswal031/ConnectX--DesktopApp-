@@ -39,7 +39,11 @@ function startDiscovery() {
         console.log(`Discovery server listening on ${address.address}:${address.port}`);
     });
 
-    server.bind(5000); // Use any available port for UDP broadcast
+    // Bind the server to the appropriate network interface
+    server.bind({
+        address: '0.0.0.0', // Listen on all available network interfaces
+        exclusive: true
+    });
 
     // Broadcast a discovery message to find other instances of the app
     const broadcastAddress = getBroadcastAddress();
