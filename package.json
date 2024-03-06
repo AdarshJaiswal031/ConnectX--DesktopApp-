@@ -1,0 +1,17 @@
+{
+  "name": "connect-x",
+  "version": "1.0.0",
+  "description": "Electron file sharing app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^14.0.0",
+    "express": "^4.17.1",
+    "socket.io": "^4.4.1"
+  }
+}
